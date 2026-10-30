@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #1C1C1C;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.bigBox { 
+    width: 550px; 
+    height: 550px; 
+    background-color: #1F2937; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-right: 20px;
+}
+
+#modeButton {
+    background-color: #10B981;
+    color: #FFFFFF;
+    font-size: 20px;
+    width: 35px;
+    height: 32px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 30px; 
+}
+
+.top,.middle, .bottom{
+    font-family: "Inter", sans-serif;
+}
+
+
+body.light-mode .bigBox {
+    background-color:#ECFDF5 ;
+}
+
+body.light-mode #heading, 
+body.light-mode .toggle-box1,
+body.light-mode .toggle-box2,
+body.light-mode #pass-length-text{
+    color: #111827;
+}
+body.light-mode #bodyText {
+    color: #6B7280;
+}
+
+body.light-mode .line {
+    background-color:#D5D4D8   ;
+}
+
+body.light-mode .passwordBox {
+    background-color:#273549 ;
+}
+
+
+#heading {
+    color: white;
+    font-family: "Karla", sans-serif;
+    font-weight: 800;
+    width: 354px;
+    height: 80px;   
+    margin-top: 64px;
+    margin-bottom: -16px;
+}
+
+.green-text { 
+    color: #10B981;
+}
+
+#bodyText {
+   color: #D5D4D8;
+   margin-top: 10px;
+   font-weight:lighter;
+}
+
+.toggle {
+    background-color: #D5D4D8;
+    box-shadow: 1px 1px 5px #585858;
+    display: inline-flex;
+    align-items:center;
+    margin-left: 10px;
+    border-radius: 10px;
+    height: 19px;
+    width: 35px;
+}
+
+#symbols:checked + .toggle-button, 
+#numbers:checked + .toggle-button{
+    background-color: #ffffff;
+    transform: translateX(17.5px);
+
+}
+.toggle:has(#symbols:checked),
+.toggle:has(#numbers:checked) {
+    background-color: #10B981;
+}
+
+#symbols { 
+    display: none;
+}
+
+#numbers {
+    display: none;
+}
+
+.toggle-button {
+    background-color:#ffffff;
+    color: #1C1C1C;
+    border-radius: 10px;
+    height: 19px;
+    width: 17.5px;
+} 
+
+
+#button {
+    background-color: #10B981;
+    color: #FFFFFF;
+    font-size: 16px;
+    width: 191px;
+    height: 42px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.top{
+    width: 434px;
+}
+
+.middle { 
+    display: flex;
+    align-items: center;
+    width: 434px;
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+ 
+.toggle-box1, .toggle-box2{
+    display:flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.line {
+    border: none;
+    background-color: #273549 ;
+    height: 1px;
+    width: 446px;
+    margin: 20px;
+}
+
+.passwords {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.passwordBox {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #273549;
+    width: 211px;
+    height: 39px;
+    border-radius: 6px;
+    color:#55F991 ;
+    font-size: 16px;
+}
+
+.add-ons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.toggles {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#passwordLength {
+    color: #111827;
+    width: 25px;
+    height: 16px;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 1px 1px 5px #585858;
+    text-align: center;
+}
+
+#passwordLength::-webkit-inner-spin-button,
+#passwordLength::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#pass-length-text {
+    color: #FFFFFF;
+}
+
+#lengthError {
+    font-size: 11px;
+    color: rgb(209, 6, 6);
+}
+
+.image{
+    position: absolute;
+    right: 8px;
+    width: 15px;
+    height:15px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+} 
+
